@@ -5,6 +5,8 @@
     <declare-styleable name="EasySettingItem">
         <attr name="iconResID" format="reference" />
         <attr name="arrowResID" format="reference" />
+        <attr name="cbDrawableResID" format="reference" />
+        <attr name="isChecked" format="boolean" />
         <attr name="textContent" format="string|reference" />
         <attr name="textColor" format="color|reference" />
         <attr name="textSize" format="dimension" />

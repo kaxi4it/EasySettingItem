@@ -14,15 +14,21 @@
         android:layout_height="wrap_content" />
     <com.guyj.EasySettingItem
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#777777"
-        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:background="#aaaaaa"
+        android:padding="10dp"
         android:gravity="center_vertical"
         app:iconResID="@mipmap/ic_launcher"
-        app:arrowResID="@mipmap/ic_launcher"
-        app:textContent="test"
+        app:textContent="icon左，arrow右，cb是单选，需要显示就填ResID,不需要显示就不填写"
+        app:textMarginTop="10dp"
+        app:textMarginLeft="10dp"
+        app:textMarginBottom="10dp"
+        app:textMarginRight="10dp"
         app:textColor="#111111"
-        app:textMarginLeft="20dp"
+        app:textSize="14sp"
+        app:arrowResID="@mipmap/ic_launcher"
+        app:cbDrawableResID="@drawable/checkbox_bg"
+        app:isChecked="false"
         />
 
 

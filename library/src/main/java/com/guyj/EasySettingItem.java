@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,9 +18,11 @@ public class EasySettingItem extends LinearLayout {
     private ImageView icon;
     private TextView text;
     private ImageView arrow;
+    private CheckBox checkBox;
     private LayoutParams iconParams;
     private LayoutParams textParams;
     private LayoutParams arrowParams;
+    private LayoutParams cbParams;
     private int iconResID;
     private int arrowResID;
     private String textContent;
@@ -29,6 +32,8 @@ public class EasySettingItem extends LinearLayout {
     private int topMargin;
     private int rightMargin;
     private int bottomMargin;
+    private boolean isChecked;
+    private int cbDrawableResID;
 
 
     public EasySettingItem(Context context) {
@@ -57,7 +62,9 @@ public class EasySettingItem extends LinearLayout {
 
         arrowResID = typedArray.getResourceId(R.styleable.EasySettingItem_arrowResID, 0);
         iconResID = typedArray.getResourceId(R.styleable.EasySettingItem_iconResID, 0);
+        cbDrawableResID = typedArray.getResourceId(R.styleable.EasySettingItem_cbDrawableResID, 0);
         textColor = typedArray.getColor(R.styleable.EasySettingItem_textColor, Color.parseColor("#000000"));
+        isChecked = typedArray.getBoolean(R.styleable.EasySettingItem_isChecked, false);
         textContent = typedArray.getString(R.styleable.EasySettingItem_textContent);
         textSize = typedArray.getDimensionPixelOffset(R.styleable.EasySettingItem_textSize, sp2px(12));//得到的是px
         leftMargin = typedArray.getDimensionPixelOffset(R.styleable.EasySettingItem_textMarginLeft, 0);//得到的是px
@@ -89,6 +96,16 @@ public class EasySettingItem extends LinearLayout {
             arrowParams = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             addView(arrow, arrowParams);
         }
+        if (cbDrawableResID!=0){
+            checkBox=new CheckBox(context);
+            checkBox.setChecked(isChecked);
+            checkBox.setClickable(false);
+            checkBox.setBackgroundDrawable(null);
+            checkBox.setButtonDrawable(cbDrawableResID);
+            cbParams=new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            addView(checkBox, cbParams);
+        }
+
     }
 
     private int px2sp(float pxValue) {
