@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <com.guyj.EasySettingItem
-        android:id="@+id/list_item"
+        android:id="@+id/list_item1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#aaaaaa"
@@ -30,7 +30,60 @@
         app:arrowResID="@mipmap/ic_launcher"
         app:cbDrawableResID="@drawable/checkbox_bg"
         app:isChecked="false"
+        app:toastMsg="您点击的速度太快，冷静一点"
+        app:intervalTime="3000"
         />
 
+    <com.guyj.EasySettingItem
+    android:id="@+id/list_item2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#bbbbbb"
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    app:textContent="icon左，arrow右，cb是单选，需要显示就填ResID,不需要显示就不填写"
+    app:textColor="#222222"
+    app:textSize="14sp"
+    app:arrowResID="@mipmap/ic_launcher"
+    app:cbDrawableResID="@drawable/checkbox_bg"
+    app:isChecked="false"
+    app:intervalTime="3000"
+    />
+    <com.guyj.EasySettingItem
+        android:id="@+id/list_item3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#cccccc"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        app:textContent="icon左，arrow右，cb是单选，需要显示就填ResID,不需要显示就不填写"
+        />
+    <com.guyj.EasySettingItem
+        android:id="@+id/list_item4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#bbbbbb"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        app:iconResID="@mipmap/ic_launcher"
+        app:textContent="icon左，arrow右，cb是单选，需要显示就填ResID,不需要显示就不填写"
+        app:textColor="#222222"
+        app:textSize="14sp"
+        app:cbDrawableResID="@drawable/checkbox_bg"
+        app:isChecked="false"
+        />
+    <com.guyj.EasySettingItem
+        android:id="@+id/list_item5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#aaaaaa"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        app:textContent="icon左，arrow右，cb是单选，需要显示就填ResID,不需要显示就不填写"
+        app:textColor="#111111"
+        app:textSize="14sp"
+        app:cbDrawableResID="@drawable/checkbox_bg"
+        app:isChecked="false"
+        />
 
 </LinearLayout>

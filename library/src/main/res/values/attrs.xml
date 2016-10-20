@@ -14,6 +14,8 @@
         <attr name="textMarginTop" format="dimension" />
         <attr name="textMarginRight" format="dimension" />
         <attr name="textMarginBottom" format="dimension" />
+        <attr name="intervalTime" format="integer" />
+        <attr name="toastMsg" format="string|reference" />
     </declare-styleable>
 
 </resources>
