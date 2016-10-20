@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.Checkable;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -14,7 +15,7 @@ import android.widget.TextView;
 /**
  * Created by kaxi4it on 2016/10/12.
  */
-public class EasySettingItem extends LinearLayout {
+public class EasySettingItem extends LinearLayout{
     private ImageView icon;
     private TextView text;
     private ImageView arrow;
@@ -35,6 +36,21 @@ public class EasySettingItem extends LinearLayout {
     private boolean isChecked;
     private int cbDrawableResID;
 
+    public ImageView getIcon() {
+        return icon;
+    }
+
+    public TextView getText() {
+        return text;
+    }
+
+    public ImageView getArrow() {
+        return arrow;
+    }
+
+    public CheckBox getCheckBox() {
+        return checkBox;
+    }
 
     public EasySettingItem(Context context) {
         super(context);
